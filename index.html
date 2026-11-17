@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 3 Months, My Love</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#ffe9ef;--bg2:#ffc4d6;--card:#fff;--ink:#7a0a1f;--title:#c8102e;--pink:#ffb3c6;--cherry:#c8102e;--glow:rgba(200,16,46,.28);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a0510;--bg2:#4d0a1c;--card:#3d0a19;--ink:#ffd6e0;--title:#ff9fb8;--pink:#ff9fb8;--glow:rgba(0,0,0,.45);color-scheme:dark}}
+:root[data-theme="dark"]{--bg1:#2a0510;--bg2:#4d0a1c;--card:#3d0a19;--ink:#ffd6e0;--title:#ff9fb8;--pink:#ff9fb8;--glow:rgba(0,0,0,.45);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+html,body{margin:0;min-height:100%}
+body{font-family:'Quicksand','Trebuchet MS',sans-serif;font-weight:500;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+#sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.fl{position:absolute;bottom:-60px;animation:rise linear forwards}
+@keyframes rise{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.85}50%{transform:translate(calc(var(--dx)*.4),-55vh) rotate(calc(var(--r)*.5))}100%{transform:translate(var(--dx),-115vh) rotate(var(--r));opacity:0}}
+.fx{position:fixed;pointer-events:none;z-index:40;transform:translate(-50%,-50%)}
+.pop{animation:pop 1s ease-out forwards}
+@keyframes pop{from{opacity:1;transform:translate(-50%,-50%) scale(.4)}to{opacity:0;transform:translate(calc(-50% + var(--tx)),calc(-50% + var(--ty))) scale(1.2) rotate(40deg)}}
+.fall{animation:fall 1.6s ease-in forwards}
+@keyframes fall{from{opacity:1}to{opacity:0;transform:translate(-50%,40vh) rotate(60deg)}}
+.trail{animation:trail .9s forwards}
+@keyframes trail{from{opacity:.9}to{opacity:0;transform:translate(-50%,24px) scale(.5)}}
+.cupid{position:fixed;top:28%;left:-140px;font-size:64px;z-index:50;pointer-events:none;animation:cross 3.2s ease-in-out forwards}
+@keyframes cross{50%{top:14%}to{left:110vw;top:30%}}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:36px 18px 60px;text-align:center}
+section{margin:0 0 64px}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.js .reveal.show{opacity:1;transform:none}
+.angel{font-size:64px;display:inline-block;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px) rotate(6deg)}}
+h1{font-family:'Dancing Script','Brush Script MT',cursive;font-size:clamp(3rem,15vw,5.6rem);line-height:1;margin:6px 0 10px;color:var(--title);background:linear-gradient(90deg,var(--cherry),#ff6f91,var(--cherry));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+h2{font-family:'Dancing Script','Brush Script MT',cursive;font-size:2.2rem;color:var(--title);margin:0 0 6px}
+p{line-height:1.6;margin:8px 0}
+#to{font-size:1.2rem;font-weight:700;min-height:1.6em}
+input{font:inherit;color:var(--ink);background:var(--card);border:3px solid var(--pink);border-radius:999px;padding:12px 20px;width:min(300px,80%);text-align:center;outline:none}
+input:focus-visible,.btn:focus-visible,.flip:focus-visible,.heart:focus-visible{outline:3px solid var(--cherry);outline-offset:3px}
+.btn{font:inherit;font-weight:700;font-size:1.05rem;color:#fff;background:linear-gradient(145deg,#e0193f,#a50d27);border:0;border-radius:999px;padding:14px 28px;cursor:pointer;box-shadow:0 8px 20px var(--glow);transition:transform .15s}
+.btn:hover{transform:scale(1.06)}.btn:active{transform:scale(.95)}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.07);box-shadow:0 12px 30px var(--glow)}}
+.heart{position:relative;display:inline-block;background:none;border:0;padding:0;cursor:pointer;width:190px;height:190px;animation:beat 1.3s ease-in-out infinite;filter:drop-shadow(0 10px 18px var(--glow))}
+.heart svg{width:100%;height:100%;fill:var(--cherry)}
+.heart b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Dancing Script',cursive;font-size:5.4rem;padding-bottom:12px}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.12)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.bubble{background:var(--card);border:3px solid var(--pink);border-radius:22px;padding:14px 20px;margin:16px auto 0;max-width:420px;min-height:1.6em;font-weight:700;box-shadow:0 8px 20px var(--glow)}
+.bubble.in{animation:bin .5s cubic-bezier(.3,1.6,.6,1)}
+@keyframes bin{from{transform:scale(.6) rotate(-4deg);opacity:0}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:18px}
+.flip{font:inherit;color:inherit;background:none;border:0;padding:0;height:190px;perspective:900px;cursor:pointer}
+.inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s}
+.flip.on .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:24px;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 8px 20px var(--glow)}
+.front{background:linear-gradient(145deg,#d3173a,#9b0b23);color:#fff}
+.front i{font-style:normal;font-size:2.4rem}
+.front small{opacity:.85}
+.back{background:var(--card);border:3px solid var(--pink);transform:rotateY(180deg);font-size:.95rem;line-height:1.5}
+.choice{position:relative;min-height:170px;display:flex;justify-content:center;align-items:flex-start;margin-top:14px}
+#no{position:absolute;left:58%;top:0;transition:left .25s,top .25s;background:var(--card);color:var(--ink);border:3px solid var(--pink);box-shadow:none}
+#yes{transition:transform .25s}
+#final{font-family:'Dancing Script',cursive;font-size:2rem;color:var(--title);min-height:2.6em}
+footer{font-size:.9rem;opacity:.8}
+@media (prefers-reduced-motion:reduce){.fl,.angel,h1,.heart,.pulse{animation:none}}
+</style>
+</head>
+<body>
+<div id="sky"></div>
+<main>
+<section>
+  <div class="angel">👼</div>
+  <h1>Happy 3 Months</h1>
+  <p id="to">to the girl who stole my heart 💕</p>
+  <p><input id="name" type="text" maxlength="30" placeholder="Type her name here 💕" aria-label="Her name"></p>
+  <p><button class="btn pulse" id="go">Open your surprise 💌</button></p>
+</section>
+
+<section class="reveal" id="surprise">
+  <h2>Tap my heart</h2>
+  <p>Every tap is a little love note.</p>
+  <button class="heart" id="heart" aria-label="Tap the heart for a love note">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <b>3</b>
+  </button>
+  <div class="bubble" id="bubble" aria-live="polite">Three months of us 🌷</div>
+</section>
+
+<section class="reveal">
+  <h2>Our first three months</h2>
+  <p>Tap a card to flip it.</p>
+  <div class="cards">
+    <button class="flip"><div class="inner"><div class="face front"><i>🦋</i><strong>Month 1</strong><small>Hello, butterflies</small></div><div class="face back">It started with nervous smiles and a whole lot of butterflies. I knew something sweet was beginning. 🦋</div></div></button>
+    <button class="flip"><div class="inner"><div class="face front"><i>🌷</i><strong>Month 2</strong><small>Falling deeper</small></div><div class="face back">Inside jokes, long talks, and the feeling of being completely understood. 🌷</div></div></button>
+    <button class="flip"><div class="inner"><div class="face front"><i>🏡</i><strong>Month 3</strong><small>Feeling like home</small></div><div class="face back">Three months in, and you’re still my favorite person to do absolutely anything with. 🏡</div></div></button>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Cupid has a delivery</h2>
+  <p>Press the button and see who flies by.</p>
+  <button class="btn" id="cupid">Call Cupid 🏹</button>
+  <div class="bubble" id="cupidMsg">Cupid is waiting for your signal…</div>
+</section>
+
+<section class="reveal">
+  <h2>One last question</h2>
+  <p>Will you keep being mine for the next three months, and the three after that?</p>
+  <div class="choice">
+    <button class="btn" id="yes">Yes, forever 💖</button>
+    <button class="btn" id="no">No 🥺</button>
+  </div>
+  <p id="final"></p>
+</section>
+
+<footer>Made with love 💘 Tap anywhere for hearts.</footer>
+</main>
+
+<script>
+document.documentElement.classList.add('js');
+var E=['💖','💗','💕','💘','🏹','👼','🌷','🪷','🌸','💌','🎀','❤️'];
+var $=function(id){return document.getElementById(id)};
+var pick=function(a){return a[Math.floor(Math.random()*a.length)]};
+var rnd=function(a,b){return a+Math.random()*(b-a)};
+var who='';
+
+/* background floaters */
+var sky=$('sky');
+function floater(){
+  if(sky.children.length>26)return;
+  var s=document.createElement('span');s.className='fl';s.textContent=pick(E);
+  s.style.left=rnd(0,96)+'vw';s.style.fontSize=rnd(18,42)+'px';
+  s.style.setProperty('--dx',rnd(-90,90)+'px');s.style.setProperty('--r',rnd(-50,50)+'deg');
+  s.style.animationDuration=rnd(8,15)+'s';
+  s.addEventListener('animationend',function(){s.remove()});sky.appendChild(s);
+}
+for(var i=0;i<10;i++)setTimeout(floater,i*250);
+setInterval(floater,700);
+
+/* effects */
+function mk(cls,x,y,txt){
+  var s=document.createElement('span');s.className='fx '+cls;s.textContent=txt||pick(E);
+  s.style.left=x+'px';s.style.top=y+'px';s.style.fontSize=rnd(14,34)+'px';
+  document.body.appendChild(s);s.addEventListener('animationend',function(){s.remove()});return s;
+}
+function burst(x,y,n,big){
+  for(var i=0;i<n;i++){
+    var s=mk('pop',x,y),a=Math.random()*6.28,d=50+Math.random()*(big?200:90);
+    s.style.setProperty('--tx',Math.cos(a)*d+'px');s.style.setProperty('--ty',Math.sin(a)*d-40+'px');
+  }
+}
+function drop(x,y){mk('fall',x,y)}
+function say(el,t){el.textContent=t;el.classList.remove('in');void el.offsetWidth;el.classList.add('in')}
+
+document.addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY,6)});
+var last=0;
+document.addEventListener('pointermove',function(e){
+  if(e.pointerType!=='mouse')return;
+  var n=Date.now();if(n-last<70)return;last=n;
+  mk('trail',e.clientX,e.clientY,'💗').style.fontSize='14px';
+});
+
+/* hero */
+$('name').addEventListener('input',function(){
+  who=this.value.trim();
+  $('to').textContent=who?('Happy 3 months, '+who+' 💕'):'to the girl who stole my heart 💕';
+});
+$('go').addEventListener('click',function(){
+  $('surprise').scrollIntoView({behavior:'smooth',block:'start'});
+  var r=this.getBoundingClientRect();burst(r.left+r.width/2,r.top,18,true);
+});
+
+/* reveal on scroll */
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('show')})}
+
+/* heart notes */
+var notes=['You make ordinary days feel like holidays 💖','My favorite notification is your name 📱💕','Three months and I still get butterflies 🦋','Home is wherever you are 🏡','You’re my favorite hello and my hardest goodbye 🌷','Thank you for being so wonderfully you ✨','I’d choose you in every lifetime 💘','Your smile is my favorite view 🌸','Here’s to a thousand more months 🥂','You + me = my favorite math 💞'];
+var ni=0;
+$('heart').addEventListener('click',function(){
+  var r=this.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,14,true);
+  say($('bubble'),notes[ni%notes.length]);ni++;
+});
+
+/* flip cards */
+document.querySelectorAll('.flip').forEach(function(b){
+  b.addEventListener('click',function(){b.classList.toggle('on')});
+});
+
+/* cupid */
+var cmsgs=['Special delivery: one heart, handled with care 💘','Cupid says you two are a perfect shot 🏹','Direct hit! Love is in the air 💕','Cupid is taking the credit, but we know it was all you two 😉'];
+var ci=0;
+function cupid(){
+  var c=document.createElement('div');c.className='cupid';c.textContent='👼🏹';document.body.appendChild(c);
+  var t=setInterval(function(){var r=c.getBoundingClientRect();drop(r.left+40,r.top+50)},130);
+  c.addEventListener('animationend',function(){
+    clearInterval(t);c.remove();
+    say($('cupidMsg'),cmsgs[ci%cmsgs.length]);ci++;
+  });
+}
+$('cupid').addEventListener('click',cupid);
+
+/* the question */
+var dodges=0,labels=['No 🥺','Are you sure? 🥺','Pretty please? 💕','Not allowed 😜','Just press Yes 💖'];
+var no=$('no'),yes=$('yes');
+function dodge(e){
+  if(e&&e.preventDefault)e.preventDefault();
+  dodges++;
+  no.style.left=rnd(2,60)+'%';no.style.top=rnd(0,110)+'px';
+  no.textContent=labels[dodges%labels.length];
+  yes.style.transform='scale('+Math.min(1+dodges*.1,1.7)+')';
+}
+['pointerenter','pointerdown','click'].forEach(function(ev){no.addEventListener(ev,dodge)});
+yes.addEventListener('click',function(){
+  no.style.display='none';yes.textContent='Forever 💖';yes.style.transform='scale(1.2)';
+  say($('final'),(who?who+', ':'')+'I love you to the moon and back 🌙 Happy 3 months!');
+  cupid();
+  for(var i=0;i<14;i++)setTimeout(function(){burst(rnd(40,innerWidth-40),rnd(80,innerHeight-80),12,true)},i*220);
+});
+</script>
+</body>
+</html>
